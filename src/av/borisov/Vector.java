@@ -61,6 +61,9 @@ public class Vector implements Externalizable {
 	/**
 	 * A static method that performs serialization of
 	 * Vector object into the specified character stream.
+	 * <p>The serialization format is as follows: <i>"int double1 double2 ..."</i>, where
+	 * int value is the dimension of the vector and double values are its elements.
+	 * The double values have point as a decimal separator.
 	 * @param v 				a Vector to be serialized
 	 * @param out 				the character stream to serialize into
 	 * @throws IOException		Includes any I/O exceptions that may occur
@@ -78,6 +81,9 @@ public class Vector implements Externalizable {
 	/**
 	 * A static method that performs deserialization of
 	 * Vector object from the specified character stream.
+	 * <p>The serialization format is as follows: <i>"int double1 double2 ..."</i>, where
+	 * int value is the dimension of the vector and double values are its elements.
+	 * The double values have point as a decimal separator.
 	 * @param v 				a Vector to be deserialized
 	 * @param in 				the character stream to deserialize from
 	 * @throws IOException		Includes any I/O exceptions that may occur
