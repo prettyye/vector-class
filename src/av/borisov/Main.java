@@ -22,11 +22,13 @@ public class Main {
 		System.out.println("Сериализуем вектор v1 побайтово в файл \"vector\"...\n");
 		FileOutputStream out = new FileOutputStream("vector");
 		Vector.outputVector(v1, out);
+		out.close();
 		
 		System.out.println("Десериалиуем вектор побайтово из файла \"vector\" в вектор v...\n");
 		FileInputStream in = new FileInputStream("vector");
 		Vector v = new Vector();
 		Vector.inputVector(v, in);
+		in.close();
 		
 		System.out.print("Восстановленный вектор: ");
 		System.out.println(v);
